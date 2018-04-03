@@ -5,7 +5,7 @@ var express = require('express'),
     TwitterStrategy = require('passport-twitter'),
     GoolgeStrategy = require('passport-google'),
     FacebookStrategy = require('passport-facebook');
-    
+
 
 var config = require('./config.js'), //config file contains all tokens and other private info
     funct = require('./functions.js');
@@ -128,6 +128,11 @@ app.get('/signin', function(req, res){
   res.render('signin');
 });
 
+app.get('/favicon.ico', function(req, res){
+  res.redirect('/');
+});
+
+
 //sends the request through our local signup strategy, and if successful takes user to homepage, otherwise returns then to signin page
 app.post('/local-reg', passport.authenticate('local-signup', {
   successRedirect: '/',
@@ -136,7 +141,7 @@ app.post('/local-reg', passport.authenticate('local-signup', {
 );
 
 //sends the request through our local login/signin strategy, and if successful takes user to homepage, otherwise returns then to signin page
-app.post('/login', passport.authenticate('local-signin', { 
+app.post('/login', passport.authenticate('local-signin', {
   successRedirect: '/',
   failureRedirect: '/signin'
   })
