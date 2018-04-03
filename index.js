@@ -10,8 +10,10 @@ var express = require('express'),
 var config = require('./config.js'), //config file contains all tokens and other private info
     funct = require('./functions.js');
 
-var app = express();
+    var favicon = require('serve-favicon');
 
+var app = express();
+    app.use(favicon(__dirname + '/favicon.ico'));
 //===============PASSPORT=================
 
 // Passport session setup.
@@ -128,9 +130,7 @@ app.get('/signin', function(req, res){
   res.render('signin');
 });
 
-app.get('/favicon.ico', function(req, res) {
-    res.status(204);
-});
+
 
 //sends the request through our local signup strategy, and if successful takes user to homepage, otherwise returns then to signin page
 app.post('/local-reg', passport.authenticate('local-signup', {
