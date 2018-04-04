@@ -9,7 +9,7 @@ var express = require('express'),
 
 var config = require('./config.js'), //config file contains all tokens and other private info
     funct = require('./functions.js');
-
+console.log(config);
 var app = express();
 
 
