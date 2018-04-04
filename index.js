@@ -5,14 +5,17 @@ var express = require('express'),
     TwitterStrategy = require('passport-twitter'),
     GoolgeStrategy = require('passport-google'),
     FacebookStrategy = require('passport-facebook');
+    path = require('path');
+
+var app = express();
+app.use(express.static(__dirname + '/'));
 
 
 var config = require('./config.js'), //config file contains all tokens and other private info
     funct = require('./functions.js');
 
-    var favicon = require('serve-favicon');
+var favicon = require('serve-favicon');
 
-var app = express();
 //===============PASSPORT=================
 
 // Passport session setup.
