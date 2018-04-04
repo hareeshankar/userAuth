@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/'));
 
 var config = require(path.join(__dirname, 'config.js')); //config file contains all tokens and other private info
 //var    funct = require('functions.js');
-var funct = require(path.join(__dirname, 'function.js'));
+var funct = require(path.join(__dirname, 'functions.js'));
 var favicon = require('serve-favicon');
 
 //===============PASSPORT=================
