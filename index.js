@@ -13,7 +13,6 @@ var config = require('./config.js'), //config file contains all tokens and other
     var favicon = require('serve-favicon');
 
 var app = express();
-    app.use(favicon(__dirname + '/favicon.ico'));
 //===============PASSPORT=================
 
 // Passport session setup.
