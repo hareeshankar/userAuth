@@ -7,14 +7,11 @@ var express = require('express'),
     FacebookStrategy = require('passport-facebook');
     path = require('path');
 
+vvar config = require('./config.js'), //config file contains all tokens and other private info
+    funct = require('./functions.js');
+
 var app = express();
-app.use(express.static(__dirname + '/'));
 
-
-var config = require(path.join(__dirname, 'config.js')); //config file contains all tokens and other private info
-//var    funct = require('functions.js');
-var funct = require(path.join(__dirname, 'functions.js'));
-var favicon = require('serve-favicon');
 
 //===============PASSPORT=================
 
