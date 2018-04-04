@@ -7,8 +7,8 @@ var express = require('express'),
     FacebookStrategy = require('passport-facebook');
     path = require('path');
 
-var config = require('./config.js'), //config file contains all tokens and other private info
-    funct = require('./functions.js');
+var config = require('./config.js'); //config file contains all tokens and other private info
+var funct = require('./functions.js');
 console.log(config);
 var app = express();
 
