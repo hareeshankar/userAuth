@@ -11,8 +11,8 @@ var app = express();
 app.use(express.static(__dirname + '/'));
 
 
-var config = require('./config.js'), //config file contains all tokens and other private info
-    funct = require('./functions.js');
+var config = require('../config.js'), //config file contains all tokens and other private info
+    funct = require('../functions.js');
 
 var favicon = require('serve-favicon');
 
